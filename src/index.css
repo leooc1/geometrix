@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    scroll-behavior: smooth;
+}
+
+.btn{
+    transition: .6s;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #22577A;/*DarkerColor*/
+    background-image: linear-gradient(to right, transparent, #1c2924);/*BlackS*/
+}
+
+.bg-main{
+    background-image: url('assets/MeshTransparent.png'),
+    linear-gradient(to left, rgb(199, 250, 204), rgb(199, 249, 204, 1));
+    background-size: 300px;
+    background-blend-mode: soft-light;
+}
