@@ -1,17 +1,19 @@
 import Container from "./components/Container"
 import Nav from "./components/Nav"
+import Cube from "./components/Cube"
 import Description from "./components/Description"
+import Newton from "./components/Newton"
 import logo from './assets/logos/logo-ex.png'
 import Livros from './assets/Livros.png'
 import Algebra from './assets/Algebra.png'
-import Cubos from './assets/Cubos.png'
-import Pendulo from './assets/Pendulo.png'
+// import Cubos from './assets/Cubos.png'
+// import Pendulo from './assets/Pendulo.png'
 import Sinais from './assets/Sinais.png'
 
 function App() {
 
   return (
-    <div>
+    <div class="w-full h-full px-8 py-16 bg-LightColor bg-main">
       <Nav logo={logo} />
       <div className="w-full h-[80vh] flex justify-around items-center">
         <div>
@@ -50,7 +52,8 @@ function App() {
         <img className="h-80" src={Algebra} alt="Algebra" />
       </Container>
       <Container id="matriz">
-        <img className="h-80" src={Cubos} alt="Cubos" />
+        <Cube />
+        {/* <img className="h-80" src={Cubos} alt="Cubos" /> */}
         <Description>
           <p className="text-justify">
             Para a funcionalidade de criação de matrizes, a Geometrix oferece diversas operações matemáticas úteis, como determinantes, inversas, adjacentes e a Regra de Sarrus. Essa funcionalidade é especialmente importante para estudantes e profissionais de áreas como álgebra linear, estatística e computação gráfica. A Geometrix permite que os usuários criem matrizes de diferentes tamanhos e preencham seus valores manualmente ou usando fórmulas. Além disso, os usuários podem visualizar a matriz em formato de tabela e realizar as operações matemáticas desejadas com poucos cliques.
@@ -65,7 +68,7 @@ function App() {
           </p>
           <a className="py-2 px-3 border border-black rounded-xl btn" href="#">SIMULAR</a>
         </Description>
-        <img className="h-80" src={Pendulo} alt="Pendulo" />
+        <Newton />
       </Container>
     </div>
   )
