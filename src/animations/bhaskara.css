@@ -1,0 +1,207 @@
+.certo-X{
+    transform: translate(500%, 180%);
+}
+
+.certo-Igual {
+    transform: translate(0%, -50%);
+    top: 25%;
+    left: 30%;
+}
+
+.certo-menosB {
+    transform: translate(0%, -50%);
+    top: 60%;
+    right: 50%;
+}
+
+.certo-maisOUmenos {
+    transform: translate(0%, -50%);
+    top: 20%;
+    left: 50%;
+}
+
+.certo-raiz {
+    transform: translate(0%, -50%);
+    top: 45%;
+    left: 7%;
+}
+
+.certo-delta {
+    transform: translate(0%, -50%);
+    top: 25%;
+    left: 2%;
+}
+
+.certo-divisao {
+    transform: translate(0%, -50%);
+    top: 35%;
+}
+
+.certo-doisA {
+    transform: translate(0%, -50%);
+    top: 0%;
+    left: 10%;
+}
+
+/**************************************************/
+
+.X {
+    transform: translate(500%, 180%);
+    animation-name: X;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes X {
+    0% {}
+    100% {
+        transform: translate(0%, 100%);
+    }
+}
+
+.Igual {
+    transform: translate(0%, -50%);
+    top: 25%;
+    left: 30%;
+    animation-name: Igual;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes Igual {
+    0% {}
+    100% {
+        transform: translate(-200%, 0%);
+    }
+}
+
+.menosB {
+    transform: translate(0%, -50%);
+    top: 60%;
+    right: 50%;
+    animation-name: menosB;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes menosB {
+    0% {}
+    25% {
+        transform: translate(200%, 40%);
+    }
+    75% {
+        transform: translate(-20%, -20%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-20%, -240%);
+    }
+}
+
+.maisOUmenos {
+    transform: translate(0%, -50%);
+    top: 20%;
+    left: 50%;
+    animation-name: maisOUmenos;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes maisOUmenos {
+    0% {}
+    25%{
+        transform: translate(450%, 400%);
+    }
+    75%{
+        transform: translate(-500%, -200%);
+    }
+    100%{
+        transform: translate(0%, 0%);
+    }
+}
+
+.raiz {
+    transform: translate(0%, -50%);
+    top: 45%;
+    left: 7%;
+    animation-name: raiz;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes raiz {
+    0%{}
+    25%{
+        transform: translate(20%, 200%) rotate(45deg);
+    }
+    75%{
+        transform: translate(200%, -260%) rotate(225deg);
+    }
+    100%{
+        transform: translate(250%, -150%);
+    }
+}
+
+.delta {
+    transform: translate(0%, -50%);
+    top: 25%;
+    left: 2%;
+    animation-name: delta;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes delta {
+    0%{}
+    25%{
+        transform: translate(70%, -90%) rotate(180deg);
+    }
+    75%{
+        transform: translate(40%, 200%) rotate(360deg);
+    }
+    100%{
+        transform: translate(750%, -40%);
+    }
+}
+
+.divisao {
+    transform: translate(0%, -50%);
+    top: 35%;
+    animation-name: divisao;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes divisao {
+    0%{}
+    25%{
+        transform: translate(0%, -10%) rotate(360deg);
+    }
+    75%{
+        transform: translate(70%, -80%) rotate(180deg);
+    }
+    100%{
+        transform: translate(50%, -40%) rotate(-32.6deg);
+    }
+}
+
+.doisA {
+    transform: translate(0%, -50%);
+    top: 0%;
+    left: 10%;
+    animation-name: doisA;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes doisA {
+    0%{}
+    25%{
+        transform: translate(400%, 100%) rotate(100deg);
+    }
+    75%{
+        transform: translate(0%, 150%) rotate(720deg);
+    }
+    100%{
+        transform: translate(200%, 250%);
+    }
+}

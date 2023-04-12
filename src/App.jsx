@@ -1,11 +1,12 @@
 import Container from "./components/Container"
 import Nav from "./components/Nav"
 import Cube from "./components/Cube"
-import Description from "./components/Description"
 import Newton from "./components/Newton"
+import Bhaskara from "./animations/Bhaskara"
+import Description from "./components/Description"
 import logo from './assets/logos/logo-ex.png'
 import Livros from './assets/Livros.png'
-import Algebra from './assets/Algebra.png'
+// import Algebra from './assets/Algebra.png'
 // import Cubos from './assets/Cubos.png'
 // import Pendulo from './assets/Pendulo.png'
 import Sinais from './assets/Sinais.png'
@@ -49,7 +50,8 @@ function App() {
           </p>
           <a className="py-2 px-3 border border-black rounded-xl btn" href="#">PLANIFICAR FUNÇÃO</a>
         </Description>
-        <img className="h-80" src={Algebra} alt="Algebra" />
+        <Bhaskara/>
+        {/* <img className="h-80" src={Algebra} alt="Algebra" /> */}
       </Container>
       <Container id="matriz">
         <Cube />
