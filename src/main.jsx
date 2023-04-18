@@ -7,6 +7,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './components/routes/login/Login'
 import Cadastro from './components/routes/login/Cadastro'
+import Newton from './components/Newton'
 
 const router = createBrowserRouter([
   {
@@ -18,14 +19,15 @@ const router = createBrowserRouter([
     element: <Login/>
   },
   {
-    path:'/login/cadastro',
+    path:'/cadastro',
     element: <Cadastro/>
   },
   {
     path: '/newto',
-    element: <Algebric/>
+    element: <Newton/>
   }
 ])
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
