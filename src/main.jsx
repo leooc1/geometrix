@@ -5,7 +5,8 @@ import Algebric from './components/routes/Algebric'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Login from './components/routes/Login'
+import Login from './components/routes/login/Login'
+import Cadastro from './components/routes/login/Cadastro'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path:'/login',
     element: <Login/>
+  },
+  {
+    path:'/login/cadastro',
+    element: <Cadastro/>
   },
   {
     path: '/newto',
