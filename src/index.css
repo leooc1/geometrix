@@ -11,6 +11,15 @@
   font-family: "Poppins", sans-serif;
 }
 
+/*GEOMETRIX*/
+.smoothness{
+  transition: .4s ease-in-out;
+}
+
+.smoothness:hover{
+  transform: translateY(-20px);  
+}
+
 .btn {
   transition: 0.6s;
 }

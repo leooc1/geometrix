@@ -2,12 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import Algebric from './components/routes/Algebric'
+import Login from './components/routes/login/Login'
+import Cadastro from './components/routes/login/Cadastro'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Login from './components/routes/login/Login'
-import Cadastro from './components/routes/login/Cadastro'
-import Newton from './components/Newton'
 
 const router = createBrowserRouter([
   {
@@ -24,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/newto',
-    element: <Newton/>
+    element: <Algebric/>
   }
 ])
 

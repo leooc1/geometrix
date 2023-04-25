@@ -10,7 +10,9 @@ export default function Login() {
             backgroundSize: 'cover',
         }}>
             <section className='scale-100 sm:scale-110'>
+                <Link to='/newto'>
                 <img className='h-28 mb-8 align-self-center justify-center' src={logo} alt="Logo" />
+                </Link>
                 <h2 className="text-3xl font-bold w-60 text-[#22577A]">Faça seu login para acessar o site</h2>
             </section>
             <section className='scale-100 sm:scale-110'>
@@ -22,7 +24,7 @@ export default function Login() {
                     
                     <a href="#" className="text-[#22577A] font-semibold -ml-40">Esqueci minha senha</a>
                     <input className="bg-[#22577A] w-48 my-1 mt-4 p-2 rounded-xl text-white" type="submit" value="ENTRAR"/>
-                        <p>Não tem conta? <Link className="text-[#22577A] font-semibold" to='/login/cadastro'>crie uma</Link></p>
+                        <p>Não tem conta? <Link className="text-[#22577A] font-semibold" to='/cadastro'>crie uma</Link></p>
                 </form>
             </section>
         </main>

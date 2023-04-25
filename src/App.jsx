@@ -6,10 +6,8 @@ import Bhaskara from "./animations/Bhaskara"
 import Description from "./components/Description"
 import logo from './assets/logos/logo-ex.png'
 import Livros from './assets/Livros.png'
-// import Algebra from './assets/Algebra.png'
-// import Cubos from './assets/Cubos.png'
-// import Pendulo from './assets/Pendulo.png'
 import Sinais from './assets/Sinais.png'
+import { Link } from "react-router-dom"
 
 function App() {
 
@@ -18,16 +16,18 @@ function App() {
       <Nav logo={logo} />
       <div className="w-full h-[80vh] flex justify-around items-center">
         <div>
-          <h1 className="text-[5rem] font-bold">
-            <span className="transition-all hover:relative hover:-top-3">G</span>
-            <span className="transition-all hover:relative hover:-top-3">E</span>
-            <span className="transition-all hover:relative hover:-top-3">O</span>
-            <span className="transition-all hover:relative hover:-top-3">M</span>
-            <span className="transition-all hover:relative hover:-top-3">E</span>
-            <span className="transition-all hover:relative hover:-top-3">T</span>
-            <span className="transition-all hover:relative hover:-top-3">R</span>
-            <span className="transition-all hover:relative hover:-top-3">I</span>
-            <span className="transition-all hover:relative hover:-top-3">X</span>
+          <h1 className="text-[5rem] font-bold flex">
+            <p className="smoothness">G</p>
+            <p className="smoothness">E</p>
+            <p className="smoothness">O</p>
+            <p className="smoothness">M</p>
+            <p className="smoothness">E</p>
+            <p className="smoothness">T</p>
+            <p className="smoothness">R</p>
+            <p className="smoothness">I</p>
+            <Link to='/login'>
+            <p className="smoothness">X</p>
+            </Link>
           </h1>
           <h2 className="text-2xl text-left pt-3 w-96">
             Traga à vida a matemática com GEOMETRIX
@@ -70,7 +70,7 @@ function App() {
           </p>
           <a className="py-2 px-3 border border-black rounded-xl btn" href="#">SIMULAR</a>
         </Description>
-        <Newton />
+      <Newton />
       </Container>
     </div>
   )
