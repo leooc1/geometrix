@@ -23,8 +23,10 @@ export default function Bhaskara() {
     // // var bhaskara = document.getElementById('bhaskara')
 
     setInterval(() => {
+        if(bhaskara.current){
         console.log(bhaskara.current.getBoundingClientRect().top)
         Animation(bhaskara.current.getBoundingClientRect().top)
+        }
     })
 
     function Animation(top) {

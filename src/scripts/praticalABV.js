@@ -2,11 +2,11 @@ export function say (object){
     console.log(object);
 }
 
-export function one(String){
+function one(String){
     return document.querySelector(String);
 }
 
-export function many(String){
+function many(String){
     return document.querySelectorAll(String);
 }
 

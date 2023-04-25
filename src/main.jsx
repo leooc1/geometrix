@@ -4,9 +4,11 @@ import App from './App'
 import Algebric from './components/routes/Algebric'
 import Login from './components/routes/login/Login'
 import Cadastro from './components/routes/login/Cadastro'
+import Cartesian from './components/Cartesian'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import CArtesian from './components/Cartesian'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: '/newto',
     element: <Algebric/>
+  },
+  {
+    path: '/cartesian',
+    element: <Cartesian/>
   }
 ])
 

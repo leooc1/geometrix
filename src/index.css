@@ -21,6 +21,9 @@
 }
 
 .btn {
+  top: 10px;
+  position: relative;
+  margin-top: 16rem !important;
   transition: 0.6s;
 }
 

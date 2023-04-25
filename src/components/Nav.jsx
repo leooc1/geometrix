@@ -1,6 +1,6 @@
 export default function Nav({logo}){
     return(
-        <nav className="flex justify-between sticky top-5 w-full py-4 backdrop-blur z-50">
+        <nav className="flex justify-between sticky top-5 w-full py-4 backdrop-blur z-50 animate">
             <a href="#" className="pl-2"><img className="h-12" src={logo} alt="Logo"/></a>
             <ul className="flex justify-around">
                 <li className="flex items-center px-8"><a href="#sobre">SOBRE</a></li>
