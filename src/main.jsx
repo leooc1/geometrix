@@ -9,6 +9,7 @@ import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import CArtesian from './components/Cartesian'
+import Geometry from './components/routes/geometry/Geometry'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/cartesian',
     element: <Cartesian/>
+  },
+  {
+    path: '/geometry',
+    element: <Geometry/>
   }
 ])
 
