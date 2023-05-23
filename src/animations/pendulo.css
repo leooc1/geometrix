@@ -9,7 +9,7 @@
   
   /*PENDULO DE NEWTON*/
   .newtons-cradle {
-    scale: 2;
+    scale: 1.8;
     --uib-size: 150px;
     --uib-speed: 1.6s;
     --uib-color: #22577A;
@@ -20,7 +20,7 @@
     justify-content: center;
     width: var(--uib-size);
     height: var(--uib-size);
-    transform: translateX(-80px);
+    transform: translateX(-50px);
   }
   
   .newtons-cradle__dot {

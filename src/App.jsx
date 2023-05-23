@@ -12,7 +12,7 @@ import { Link } from "react-router-dom"
 function App() {
 
   return (
-    <div className="w-full h-full px-8 py-16 bg-LightColor bg-main">
+    <div className="w-full h-full px-8 py-16 bg-main">
       <Nav logo={logo} />
       <div className="w-full h-[80vh] flex justify-around items-center">
         <div>

@@ -15,7 +15,6 @@ function Geometry() {
     reader.onload = function (event) {
       const jsonContent = event.target.result;
       const jsonData = JSON.parse(jsonContent);
-      // Agora você pode acessar os dados do JSON
       console.log(jsonData);
       const newGeometries = [];
       for (let i = 1; i < jsonData.geometries.length; i++) {
@@ -50,7 +49,7 @@ function Geometry() {
     const objetoJSON = JSON.stringify(objeto);
 
     const blob = new Blob([objetoJSON], { type: 'application/json' });
-    const arquivo = new File([blob], 'data.json');
+    const arquivo = new File([blob], 'geometry.json');
 
     const urlObjeto = URL.createObjectURL(arquivo);
 

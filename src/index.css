@@ -30,7 +30,7 @@
 /*BACKGROUND*/
 .bg-main {
   background-image: url("assets/MeshTransparent.png"),
-    linear-gradient(to left, rgb(199, 250, 204), rgb(199, 249, 204, 1));
+    linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255));
   background-size: 300px;
   background-blend-mode: soft-light;
 }
