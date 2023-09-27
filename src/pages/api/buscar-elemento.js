@@ -30,7 +30,7 @@ export default
 
         else{
             if(resultado.length == 0 )
-                res.json("Achei nada, fodase")
+                res.json(["Achei nada, fodase"])
 
             else
             res.json(resultado)

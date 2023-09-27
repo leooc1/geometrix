@@ -1,12 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function NavBar() {
-  const [top, setTop] = useState(0)
-  setInterval(() => {
-    setTop(scrollY)
-  }, 1000)
+  const [top, setTop] = useState(1)
+
   return (
     <nav className={`nav-bar ${top === 0 ?
       'lg:left-0 bottom-0 rounded-t-3xl lg:rounded-r-3xl lg:rounded-tl-none lg:h-full w-full' :

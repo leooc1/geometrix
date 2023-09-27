@@ -12,7 +12,7 @@ export default
 
     const { EMAIL, SENHA } = req.body
 
-    conexao.query(`SELECT U.EMAIL, U.SENHA
+    conexao.query(`SELECT u.nome, U.EMAIL, U.SENHA
     FROM USUARIO U
     WHERE U.EMAIL = '${EMAIL}'
     AND U.SENHA = '${SENHA}'`, (erro, resultado) => {
@@ -22,11 +22,15 @@ export default
         
         else{
             if(resultado.length === 0){
-                res.status(404).send("Tem nada disso aqui não, sai vazado")
+                res.status(404).json("Tem nada disso aqui não, sai vazado")
             }
-            
-            else
-            res.json(resultado)
+            else{
+                if(resultado[0].SENHA === SENHA){
+                    res.json(resultado)
+                }
+                else
+                res.status(404).json("Tem nada disso aqui não, sai vazado")
+            }
         }
                
 

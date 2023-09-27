@@ -25,7 +25,22 @@ export default function Download() {
           URL.revokeObjectURL(urlObjeto);
         }, 0);
       }
-
+    function downloadBD(){
+        const nomeOBJ = prompt('Digite aqui o nome do objeto:')
+        const body = {
+            TIPO:1,
+            NOME_OBJETO: nomeOBJ,
+            OBJETO: render,
+            ID_USUARIO: 11
+        }
+        fetch('/api/elemento',{
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify(body)
+        })
+        .then(response=>console.log(response))
+        .catch(err=>console.log(err))
+    }
     return (
         <div className='flex justify-center py-2'>
             <ul className='flex flex-col'>
@@ -40,7 +55,7 @@ export default function Download() {
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button onClick={downloadBD}>
                         <Image src='/matriz/profile/save.svg' alt='save' width={35} height={35} />
                     </button>
                 </li>
