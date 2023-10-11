@@ -1,3 +1,4 @@
+'use client'
 import Cadastro from '@/components/auth-form/Cadastro'
 import Login from '@/components/auth-form/Login'
 import Head from 'next/head'

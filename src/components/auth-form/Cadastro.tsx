@@ -13,7 +13,7 @@ export default function Cadastro() {
             confirmaSENHA: e.target.pwcompareC.value
         }
         if (body.SENHA === body.confirmaSENHA) {
-            fetch('/api/auth/cadastro', {
+            fetch('/api/users/auth/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body)
@@ -33,9 +33,9 @@ export default function Cadastro() {
         <div className='flip-form form-hidden' id='cadastro'>
             <section className='w-80 bg-secondary p-5'>
                 <Link href='/'>
-                    <Image className='mx-auto' src={'/logos/logo-ex.png'} alt='balão' width={250} height={100} />
+                    <Image className='mx-auto' src={'/logos/logo-ex.png'} alt='logo' width={250} height={100} />
                 </Link>
-                <form onSubmit={ReqCadastro} className='flex flex-col w-full gap-2 mt-6' action="/api/auth/cadastro" method="post">
+                <form onSubmit={ReqCadastro} className='flex flex-col w-full gap-2 mt-6' action="/api/users/auth/register" method="post">
                     <label className='font-semibold' htmlFor="name">
                         Nome ou apelido <br />
                         <input className='text-white bg-primary font-normal px-2 w-full' type="text" name="name" id="name" required />

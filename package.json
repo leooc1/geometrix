@@ -1,5 +1,5 @@
 {
-  "name": "geometrix",
+  "name": "next13",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,22 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-three/drei": "^9.84.2",
-    "@react-three/fiber": "^8.14.2",
-    "@types/node": "20.6.4",
-    "@types/react": "18.2.22",
-    "@types/react-dom": "18.2.7",
-    "@types/three": "^0.156.0",
+    "@react-three/drei": "^9.86.3",
+    "@react-three/fiber": "^8.14.5",
+    "@react-three/rapier": "^1.1.1",
+    "@types/bcrypt": "^5.0.0",
+    "@types/mysql": "^2.15.22",
+    "@types/node": "20.8.2",
+    "@types/react": "18.2.25",
+    "@types/react-dom": "18.2.10",
     "autoprefixer": "10.4.16",
+    "bcrypt": "^5.1.1",
     "eslint": "8.50.0",
-    "eslint-config-next": "13.5.2",
+    "eslint-config-next": "13.5.4",
+    "express": "^4.18.2",
     "mysql": "^2.18.1",
-    "next": "13.5.2",
-    "postcss": "8.4.30",
+    "next": "13.5.4",
+    "postcss": "8.4.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
-    "three": "^0.156.1",
-    "typescript": "5.2.2"
+    "three": "^0.157.0",
+    "typescript": "5.2.2",
+    "victory": "^36.6.11"
   }
 }

@@ -2,7 +2,7 @@ import { useFrame } from '@react-three/fiber'
 import React, { useRef } from 'react'
 
 export default function BgMatriz() {
-    const bgRef: any = useRef()
+    const bgRef: React.RefObject<any> = useRef()
     useFrame(() => {
         if (bgRef.current) {
             bgRef.current.rotation.x += 0.01

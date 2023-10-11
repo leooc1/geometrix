@@ -12,7 +12,7 @@ export default function Login() {
             EMAIL: e.target.emailL.value,
             SENHA: e.target.passwordL.value
         }
-        fetch('/api/auth/login',{
+        fetch('/api/users/auth/login',{
             method: 'POST',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify(body)
@@ -33,9 +33,9 @@ export default function Login() {
             <section className='w-80 bg-secondary p-5'>
                 <p className='text-3xl font-medium'>Entrar</p>
                 <Link href='/'>
-                    <Image className='float-right -mt-7' src={'/logos/logo.png'} alt='balão' width={70} height={70} />
+                    <Image className='float-right -mt-7' src={'/logos/logo.png'} alt='logo' width={70} height={70} />
                 </Link>
-                <form onSubmit={ReqLogin} className='flex flex-col w-full gap-5 mt-14' action="/api/auth/login" method="post">
+                <form onSubmit={ReqLogin} className='flex flex-col w-full gap-5 mt-14' action="/api/users/auth/login" method="post">
                     <label className='font-semibold' htmlFor="emailL">
                         Email <br />
                         <input className='text-white bg-primary font-normal px-2 w-full' type="email" name="email" id="emailL" required />

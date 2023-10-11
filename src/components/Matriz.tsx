@@ -2,6 +2,7 @@ import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import BgMatriz from './BgMatriz'
+import Link from 'next/link'
 
 export default function Matriz() {
     return (
@@ -21,7 +22,7 @@ export default function Matriz() {
                 </Canvas>
             </section>
             <section id='matriz-description' className='md:w-96 w-full px-3 z-10'>
-                <h2 className='font-medium text-3xl mb-5'>THREE - 3º DIMENSÃO</h2>
+                <h2 className='font-medium text-3xl mb-5'><Link href='/matriz'>THREE</Link> - 3º DIMENSÃO</h2>
                 <p className='text-lg'>Desvende os segredos da computação gráfica: mergulhe em um ambiente virtual que descomplica a relação entre matrizes e objetos 3D.<br />
                     Aqui aprende fazendo, em como números se tornam imagens e objetos de três ou mais dimensões. Algoritmos matemáticos pra quem quer entender e diversão para quem só quer descontrair aprendendo.</p>
             </section>

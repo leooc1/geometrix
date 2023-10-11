@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Menu from '@/components/matriz/Menu'
 import Add from '@/components/matriz/Add'

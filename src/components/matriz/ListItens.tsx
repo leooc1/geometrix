@@ -61,7 +61,7 @@ export default function ListItens() {
             setTimeout(()=>{
               select(Number(item.id))
             },900)
-          }}>OBJ{item.id}</li>)}
+          }}>{item.type}-{item.id}</li>)}
       </ul>
     </div>
   )

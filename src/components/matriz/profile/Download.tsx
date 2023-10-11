@@ -1,45 +1,45 @@
 import { MatrizContext } from '@/context/MatrizContext';
 import Image from 'next/image'
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 
 export default function Download() {
-    const {render} = useContext(MatrizContext)
-    async function downloadJSON(){
+    const { render } = useContext(MatrizContext)
+    async function downloadJSON() {
         const objetoJSON = JSON.stringify(render);
-    
+
         const blob = new Blob([objetoJSON], { type: 'application/json' });
         const arquivo = new File([blob], 'geometry.json');
-    
+
         const urlObjeto = URL.createObjectURL(arquivo);
-    
+
         const link = document.createElement('a');
         link.href = urlObjeto;
         link.download = arquivo.name;
-    
+
         document.body.appendChild(link);
-    
+
         link.click();
-    
+
         setTimeout(function () {
-          document.body.removeChild(link);
-          URL.revokeObjectURL(urlObjeto);
+            document.body.removeChild(link);
+            URL.revokeObjectURL(urlObjeto);
         }, 0);
-      }
-    function downloadBD(){
+    }
+    function downloadBD() {
         const nomeOBJ = prompt('Digite aqui o nome do objeto:')
         const body = {
-            TIPO:1,
+            TIPO: 1,
             NOME_OBJETO: nomeOBJ,
             OBJETO: render,
-            ID_USUARIO: 11
+            ID_USUARIO: 28
         }
-        fetch('/api/elemento',{
+        fetch('/api/element/save', {
             method: 'POST',
-            headers: {'Content-Type':'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)
         })
-        .then(response=>console.log(response))
-        .catch(err=>console.log(err))
+            .then(response => console.log(response))
+            .catch(err => console.log(err))
     }
     return (
         <div className='flex justify-center py-2'>
