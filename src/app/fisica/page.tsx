@@ -1,11 +1,11 @@
 'use client'
-import { Suspense } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { Box, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Physics, RigidBody } from '@react-three/rapier'
+import utilsToken from '@/components/utils/token'
 
 export default function Fisica() {
-
     return (
         <div className='w-screen h-screen'>
             <Canvas shadows camera={{ position: [10, 10, 10], fov: 80 }}>

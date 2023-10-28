@@ -1,5 +1,7 @@
+import utilsToken from '@/components/utils/token';
 import { MatrizContext } from '@/context/MatrizContext';
 import Image from 'next/image'
+import Link from 'next/link';
 import React, { useContext } from 'react'
 
 export default function Download() {
@@ -25,20 +27,26 @@ export default function Download() {
             URL.revokeObjectURL(urlObjeto);
         }, 0);
     }
-    function downloadBD() {
+    async function downloadBD() {
         const nomeOBJ = prompt('Digite aqui o nome do objeto:')
+        const id = await utilsToken.getId()
         const body = {
             TIPO: 1,
             NOME_OBJETO: nomeOBJ,
             OBJETO: render,
-            ID_USUARIO: 28
+            ID_USUARIO: id
         }
-        fetch('/api/element/save', {
+        await fetch('/api/element/save', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)
         })
-            .then(response => console.log(response))
+            .then(response => {
+                if (response.status === 200)
+                    alert('Deu bom!')
+                else
+                    alert('Deu ruim!')
+            })
             .catch(err => console.log(err))
     }
     return (
@@ -46,7 +54,9 @@ export default function Download() {
             <ul className='flex flex-col'>
                 <li>
                     <button>
-                        <Image src='/matriz/profile/config.svg' alt='config' width={35} height={35} />
+                        <Link href={'/listinha'}>
+                            <Image src='/matriz/profile/config.svg' alt='config' width={35} height={35} />
+                        </Link>
                     </button>
                 </li>
                 <li>

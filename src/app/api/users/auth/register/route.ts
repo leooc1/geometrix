@@ -15,8 +15,19 @@ type reqBory = {
 
 export async function POST(req: NextRequest) {
     const { NOME, EMAIL, SENHA }: reqBory = await req.json()
-    const DATA = utils.atualDate()
+    const DATA = await utils.atualDate()
     const hashPassword = await utils.hash(SENHA)
-    const result: Result = await modelUsers.register(NOME, EMAIL, hashPassword, DATA)
-    return NextResponse.json(result.value, { status: result.status })
+    let result: any = await modelUsers.verifyEmailExist(EMAIL)
+    let token;
+    if (result.status === 200) {
+        result = await modelUsers.register(NOME, EMAIL, hashPassword, DATA)
+        if (result.status === 200)
+            token = await utils.gerarToken(result.value)
+        else
+            token = result.value
+    }
+    else
+        token = result.value
+
+    return NextResponse.json(token, { status: result.status })
 }

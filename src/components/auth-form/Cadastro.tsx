@@ -2,9 +2,11 @@ import Image from 'next/image'
 import React from 'react'
 import AsideCadastro from './AsideCadastro'
 import Link from 'next/link'
+import utilsToken from '../utils/token'
+// import utilsToken from '../utils/token'
 
 export default function Cadastro() {
-    function ReqCadastro(e: any) {
+    async function ReqCadastro(e: any) {
         e.preventDefault()
         const body = {
             NOME: e.target.name.value,
@@ -13,16 +15,27 @@ export default function Cadastro() {
             confirmaSENHA: e.target.pwcompareC.value
         }
         if (body.SENHA === body.confirmaSENHA) {
-            fetch('/api/users/auth/register', {
+            await fetch('/api/users/auth/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body)
             })
-                .then(response => {
-                    console.log(response.status)
-                    return response.json()
+                .then(async (response) => {
+                    if (response.status === 200) {
+                        alert('Deu memo!')
+                        return response.json()
+                    }
+                    else{
+                        alert('Deu não!')
+                        return false
+                    }
                 })
-                .then(data => console.log(data))
+                .then(async (data)=>{
+                    if(data){
+                        await utilsToken.armazenarToken(data)
+                        location.reload()
+                    }
+                })
                 .catch(err => console.log(err))
         }
         else {

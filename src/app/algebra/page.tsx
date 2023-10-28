@@ -1,8 +1,10 @@
 'use client'
+import utilsToken from '@/components/utils/token';
 import { useEffect, useState } from 'react';
 import { VictoryChart, VictoryLine, VictoryTheme } from 'victory';
 
 export default function Algebra() {
+    
     const [valueA, setValueA] = useState(0)
     const [valueB, setValueB] = useState(0)
     const [valueC, setValueC] = useState(0)
@@ -68,7 +70,7 @@ export default function Algebra() {
                 theme={VictoryTheme.material}
                 width={300}
                 height={300}
-                domain={{ x: [-6, 6], y: [-2,10] }}
+                domain={{ x: [-6, 6], y: [-2, 10] }}
             >
                 <VictoryLine
                     interpolation={"natural"}
