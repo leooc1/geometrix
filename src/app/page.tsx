@@ -21,15 +21,15 @@ export default function Home() {
     <>
       <main className="bg-secondary w-full h-full scroll-smooth">
         <NavBar />
-        <section id="home" className="h-[200vh] w-full bg-secondary">
+        <section id="home" className="h-[200vh] w-full flex flex-col justify-evenly bg-secondary overflow-x-clip">
           <p className="font-semibold text-9xl flex justify-center gap-2 sticky top-1/2 -translate-y-1/2">
             <span className={`relative left-[-388.889px]`} style={{
               // transition: '.5s',
               left: `-${move}px`
             }}>G</span>
-            <span className={`relative top-[-437.5px]`} style={{
+            <span className={`relative bottom-[-437.5px]`} style={{
               // transition: '.5s',
-              top: `-${move / 1.4}px`
+              bottom: `-${move}px`
             }}>/</span>
             <span className={`relative left-[-87.5px]`} style={{
               // transition: '.5s',

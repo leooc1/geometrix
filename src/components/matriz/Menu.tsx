@@ -41,8 +41,8 @@ export default function Menu() {
 
 
   return (
-    <div className='menu-matriz'>
-      <section className='flex gap-3 lg:flex-col'>
+    <section className='menu-matriz'>
+      <div className='flex gap-3 lg:flex-col'>
         <Link href='/'>
           <Image alt='logo' width={35} height={35} src='/logos/logo.png' />
         </Link>
@@ -55,8 +55,8 @@ export default function Menu() {
         <button id='config' onClick={() => toggleActive(2)} className="icons-menu">
           <Image alt='' className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' width={35} height={35} src='/matriz/config.svg' />
         </button>
-      </section>
-      <section className='flex gap-3 lg:flex-col relative'>
+      </div>
+      <div className='flex gap-3 lg:flex-col relative'>
         <ListModal display={activate === 'modal-list' ? 'block':'hidden'}/>
         <button id='modal-list' onClick={() => toggleActive(3)} className="icons-menu">
           <Image alt='três pontos' className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' width={35} height={35} src='/nav/elipse.svg' />
@@ -64,7 +64,7 @@ export default function Menu() {
         <button className="icons-menu">
           <Image alt='cubo' className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' width={35} height={35} src='/nav/cube.svg' />
         </button>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
